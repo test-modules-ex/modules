@@ -1,0 +1,22 @@
+{
+  "name": "modules",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.3.0",
+    "axios": "^0.21.0",
+    "rails-erb-loader": "^5.5.2",
+    "turbolinks": "^5.2.0",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify": "^2.3.16"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

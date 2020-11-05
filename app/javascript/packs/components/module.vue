@@ -18,17 +18,16 @@ export default {
   data: () => ({
     headers: [
       { text: "Name", value: "name" },
-      { text: "Module type", value: "module_type" },
+      { text: "Module type", value: "module_type", },
       { text: "Description", value: "description" },
       { text: "Popularity", value: "popularity" }
     ],
     learning_modules: [],
     defaultItem: {
       name: "",
-      calories: "",
-      fat: "",
-      carbs: "",
-      protein: ""
+      module_type: "",
+      description: "",
+      popularity: ""
     }
   }),
   watch: {
@@ -48,7 +47,7 @@ export default {
           this.learning_modules = response.data;
         })
         .catch(e => {
-          console.log(e);
+          this.$emit('flash', e);
         });
     }
   }

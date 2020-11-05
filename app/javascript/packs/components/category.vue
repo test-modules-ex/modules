@@ -84,7 +84,7 @@ export default {
           this.categories = response.data;
         })
         .catch(e => {
-          console.log(e);
+          this.$emit('flash', e);
         });
     },
     updatePopularity(moduleId) {

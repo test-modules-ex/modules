@@ -11,46 +11,44 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_11_05_080726) do
-
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description"
+  create_table 'categories', force: :cascade do |t|
+    t.string 'name', null: false
+    t.text 'description'
   end
 
-  create_table "categories_courses", id: false, force: :cascade do |t|
-    t.bigint "course_id", null: false
-    t.bigint "category_id", null: false
-    t.index ["category_id"], name: "index_categories_courses_on_category_id"
-    t.index ["course_id"], name: "index_categories_courses_on_course_id"
+  create_table 'categories_courses', id: false, force: :cascade do |t|
+    t.bigint 'course_id', null: false
+    t.bigint 'category_id', null: false
+    t.index ['category_id'], name: 'index_categories_courses_on_category_id'
+    t.index ['course_id'], name: 'index_categories_courses_on_course_id'
   end
 
-  create_table "courses", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description"
+  create_table 'courses', force: :cascade do |t|
+    t.string 'name', null: false
+    t.text 'description'
   end
 
-  create_table "courses_learning_modules", id: false, force: :cascade do |t|
-    t.bigint "learning_module_id", null: false
-    t.bigint "course_id", null: false
-    t.index ["course_id"], name: "index_courses_modules_on_course_id"
-    t.index ["learning_module_id"], name: "index_courses_modules_on_learning_module_id"
+  create_table 'courses_learning_modules', id: false, force: :cascade do |t|
+    t.bigint 'learning_module_id', null: false
+    t.bigint 'course_id', null: false
+    t.index ['course_id'], name: 'index_courses_modules_on_course_id'
+    t.index ['learning_module_id'], name: 'index_courses_modules_on_learning_module_id'
   end
 
-  create_table "learning_module_popularities", force: :cascade do |t|
-    t.date "period_start", null: false
-    t.bigint "learning_module_id", null: false
-    t.integer "use_count", null: false
-    t.index ["learning_module_id"], name: "index_learning_module_popularities_on_learning_module_id"
+  create_table 'learning_module_popularities', force: :cascade do |t|
+    t.date 'period_start', null: false
+    t.bigint 'learning_module_id', null: false
+    t.integer 'use_count', null: false
+    t.index ['learning_module_id'], name: 'index_learning_module_popularities_on_learning_module_id'
   end
 
-  create_table "learning_modules", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "module_type", null: false
-    t.text "description"
-    t.integer "difficulty", null: false
+  create_table 'learning_modules', force: :cascade do |t|
+    t.string 'name', null: false
+    t.integer 'module_type', null: false
+    t.text 'description'
+    t.integer 'difficulty', null: false
   end
-
 end

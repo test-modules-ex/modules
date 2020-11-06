@@ -2,7 +2,7 @@
   <v-data-table :headers="headers" :items="learning_modules" sort-by="popularity" :sort-desc="true" class="elevation-1" :key="reloadKey">
     <template v-slot:top>
       <v-toolbar flat color="white">
-        <v-toolbar-title>Learning modules</v-toolbar-title>
+        <v-toolbar-title>{{ title }}</v-toolbar-title>
         <v-divider class="mx-4" inset vertical></v-divider>
         <v-spacer></v-spacer>
       </v-toolbar>
@@ -28,7 +28,8 @@ export default {
       module_type: "",
       description: "",
       popularity: ""
-    }
+    },
+    title: I18n.t("learning_modules")
   }),
   watch: {
     reloadKey: function() {

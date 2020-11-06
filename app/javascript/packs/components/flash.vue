@@ -2,7 +2,7 @@
   <div>
     <v-alert
       border="top"
-      color="red lighten-2"
+      color="blue-grey"
       dark
     >
       {{ message }}

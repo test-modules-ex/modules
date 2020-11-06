@@ -3,7 +3,7 @@ class LearningModule < ActiveRecord::Base
   has_many :courses, through: :courses_learning_modules
   has_many :learning_module_popularities
 
-  enum module_type: [ :theoretical, :practical, :training ]
+  enum module_type: %i[theoretical practical training]
 
   def popularity
     current_popularity.use_count

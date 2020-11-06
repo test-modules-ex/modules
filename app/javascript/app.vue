@@ -32,6 +32,7 @@ export default {
     },
     flashMessage(message) {
       this.message = message;
+      setTimeout(() => this.message = null, 4000);
     }
   }
 };

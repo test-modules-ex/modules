@@ -1,35 +1,50 @@
 cat1 = Category.create!(
   name: 'Lorem',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare turpis ex, in scelerisque urna molestie non. Suspendisse et felis ex. Aenean pulvinar posuere dui quis ornare. Fusce mollis lacus mi, ut euismod risus vestibulum sit amet. Ut dictum tempus hendrerit."
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare turpis ex, '\
+    'in scelerisque urna molestie non. Suspendisse et felis ex. Aenean pulvinar posuere dui quis ornare. '\
+    'Fusce mollis lacus mi, ut euismod risus vestibulum sit amet. Ut dictum tempus hendrerit.'
 )
 
 cat2 = Category.create!(
   name: 'Ipsum',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare turpis ex, in scelerisque urna molestie non. Suspendisse et felis ex. Aenean pulvinar posuere dui quis ornare. Fusce mollis lacus mi, ut euismod risus vestibulum sit amet. Ut dictum tempus hendrerit."
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare turpis ex, '\
+    'in scelerisque urna molestie non. Suspendisse et felis ex. Aenean pulvinar posuere dui quis ornare. '\
+    'Fusce mollis lacus mi, ut euismod risus vestibulum sit amet. Ut dictum tempus hendrerit.'
 )
 
 course1 = Course.create!(
   name: 'Consectetur adipiscing',
-  description: "Proin iaculis placerat neque, vel rhoncus diam. Morbi vehicula ipsum libero, eu sollicitudin sem mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi blandit magna."
+  description: 'Proin iaculis placerat neque, vel rhoncus diam. Morbi vehicula ipsum libero, eu sollicitudin '\
+    'sem mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus '\
+    'ipsum mi blandit magna.'
 )
 
 course2 = Course.create!(
-  name: "Quis ornare",
-  description: "Morbi vehicula ipsum libero, eu sollicitudin sem mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi blandit magna. Fusce ornare placerat velit, sit amet tempus tortor porttitor id."
+  name: 'Quis ornare',
+  description: 'Morbi vehicula ipsum libero, eu sollicitudin sem mollis in. Etiam gravida, magna in volutpat '\
+    'sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi blandit magna. Fusce ornare placerat velit, sit '\
+    'amet tempus tortor porttitor id.'
 )
 
 course3 = Course.create!(
   name: 'Consectetur adipiscing',
-  description: "Proin iaculis placerat neque, vel rhoncus diam. Morbi vehicula ipsum libero, eu sollicitudin sem mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi blandit magna."
+  description: 'Proin iaculis placerat neque, vel rhoncus diam. Morbi vehicula ipsum libero, eu sollicitudin sem '\
+    'mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi '\
+    'blandit magna.'
 )
 
 course4 = Course.create!(
   name: 'Placerat neque',
-  description: "Proin iaculis placerat neque, vel rhoncus diam. Morbi vehicula ipsum libero, eu sollicitudin sem mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi blandit magna."
+  description: 'Proin iaculis placerat neque, vel rhoncus diam. Morbi vehicula ipsum libero, eu sollicitudin '\
+    'sem mollis in. Etiam gravida, magna in volutpat sagittis, mi nibh tincidunt ex, vitae tempus ipsum mi '\
+    'blandit magna.'
 )
 
 names = %w[Morbi vehicula ipsum libero rhoncus sollicitudin vehicula mollis sollicitudin]
-description = "Sed a lorem nec nunc interdum aliquet non at mauris. Cras commodo gravida lorem. Nam fermentum sem vitae elit lobortis, sit amet vulputate lectus ornare. Nam a malesuada sem, ac sagittis lorem. Cras auctor elementum ante, vel imperdiet eros."
+description = 'Sed a lorem nec nunc interdum aliquet non at mauris. Cras commodo gravida lorem. Nam '\
+  'fermentum sem vitae elit lobortis, sit amet vulputate lectus ornare. Nam a malesuada sem, ac '\
+  'sagittis lorem. Cras auctor elementum ante, vel imperdiet eros.'
+
 20.times do
   LearningModule.create!(
     name: names.sample,
